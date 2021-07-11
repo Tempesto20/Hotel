@@ -1,0 +1,47 @@
+@import 'reset';
+@import "mixins";
+@import "fonts";
+// @import "vendor";
+// @import "vars";
+// @import "settings";
+
+
+
+$font-family-default: 'Montserrat';
+$font-size-default: 24px;
+$font-weight-default: 400;
+
+$max-width: 1200px;
+$xl: $max-width;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+body {
+  font-family: $font-family-default;
+  font-weight: 400;
+}
+
+.section-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: $max-width;
+
+  @media (max-width: $xl) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $lg) {
+    max-width: 750px;
+  }
+
+  @media (max-width: $md) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+
+
+
+@import "header";
