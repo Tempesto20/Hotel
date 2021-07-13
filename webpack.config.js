@@ -100,16 +100,16 @@ module.exports = {
   devtool: isProd ? false : 'source-map',
   module: {
     rules: [
-      {
-        test: /\.(html)$/,
-        include: path.join(__dirname, 'src/views'),
-          use: {
-            loader: 'html-loader',
-            options: {
-              interpolate: true
-                    } 
-  }
-      },
+  //     {
+  //       test: /\.(html)$/,
+  //       include: path.join(__dirname, 'src/views'),
+  //         use: {
+  //           loader: 'html-loader',
+  //           options: {
+  //             interpolate: true
+  //                   } 
+  // }
+  //     },
       {
         test: /\.css$/i,
         use: [

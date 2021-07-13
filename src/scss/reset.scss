@@ -60,6 +60,7 @@ button::-moz-focus-inner {
 ul li {
   list-style: none;
 }
+
 //Tempesto20
 img {
   vertical-align: top;
@@ -77,4 +78,10 @@ h6 {
 
 p {
   margin-bottom: 0px !important;
+}
+
+a {
+  text-decoration: none !important;
+  /* Отменяем подчеркивание у ссылки */
+  color: black;
 }
