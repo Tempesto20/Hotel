@@ -44,4 +44,45 @@
       </div>
     </div>
   </div>
+  <a href="#modal1" class="open_modal">oткрыть мoдaльнoе oкнo modal1</a>
+
+
+  <div id="modal1" class="modal_div">
+    <div class="modal_wrapp">
+      <h3 class="modal_head"> Модальное окно на css3</h3>
+      <!-- end .modal_head -->
+      <form class="modal_form" action="/" method="post">
+        <div class="input">
+          <input type="text" name="" placeholder="" required>
+        </div>
+        <!-- end .input -->
+        <div class="input">
+          <input type="password" name="" placeholder="" required>
+        </div>
+        <!-- end .input -->
+        <div class="input">
+          <input type="tel" pattern='\d{1}[\(]\d{3}[\)]\d{7}' title='Phone Number (Format: 9(999)9999999)' name=""
+            placeholder="" required>
+        </div>
+        <!-- end .input -->
+        <div class="input">
+          <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="" placeholder="" required>
+        </div>
+        <!-- end .input -->
+        <div class="input">
+          <textarea name="" placeholder=""></textarea>
+        </div>
+        <!-- end .input -->
+        <div class="text-center">
+          <button class="btn">Отправить</button>
+        </div>
+        <!-- end .text-center -->
+      </form>
+      <!-- end .modal_form -->
+    </div>
+    <!-- end .modal_wrapp -->
+    <span class="modal_close"></span>
+  </div>
+  <!-- end .modal_div -->
+  <div id="overlay"></div>
 </header>
