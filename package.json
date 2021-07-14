@@ -21,7 +21,6 @@
     "file-loader": "^6.2.0",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^4.5.2",
-    "jquery": "^3.6.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
@@ -45,6 +44,7 @@
   "dependencies": {
     "expose-loader": "^3.0.0",
     "focus-visible": "^5.2.0",
+    "jquery": "^3.6.0",
     "normalize.css": "^8.0.1"
   }
 }

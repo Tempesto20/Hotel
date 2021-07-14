@@ -34,30 +34,30 @@ for (let anchor of anchors) {
 }
 // ---------------
 
-//-------(Валидация e-mail)------------------------------
-function validateEmail(email) {
-	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
-}
+// -------(Валидация e-mail)------------------------------
+// function validateEmail(email) {
+// 	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// 	return re.test(email);
+// }
 
-document.getElementById('bottom__button-text').onclick = function(e) {
-	e.preventDefault();
-	const email = document.getElementById("bottom__mail-2");
+// document.getElementById('bottom__button-text').onclick = function(e) {
+// 	e.preventDefault();
+// 	const email = document.getElementById("bottom__mail-2");
 
-	if (validateEmail(email.value)) {
-		email.classList.remove('error');
-		email.classList.add('ok');
-	} else {
-		email.classList.remove('ok');
-		email.classList.add('error');
-	}
+// 	if (validateEmail(email.value)) {
+// 		email.classList.remove('error');
+// 		email.classList.add('ok');
+// 	} else {
+// 		email.classList.remove('ok');
+// 		email.classList.add('error');
+// 	}
 	
-	return false;
-}
+// 	return false;
+// }
 // ------------------
 import $ from '../../node_modules/jquery/dist/jquery.min.js';
 
-$(document).ready(function(){
+$(function(){
 
 	/* Modal */
 	$(function () {
