@@ -55,7 +55,7 @@ document.getElementById('bottom__button-text').onclick = function(e) {
 	return false;
 }
 // ------------------
-
+import $ from '../../node_modules/jquery/dist/jquery.min.js';
 
 $(document).ready(function(){
 
