@@ -1,0 +1,41 @@
+<div class="find">
+  <div class="find__background">
+    <div class="find__container section-container">
+
+      <div class="white__background">
+        <div id="book-now-container">
+          <form id="booking-form" action="#" method="get" target="_blank">
+            <input type="hidden" name="languageid" value="1">
+            <input type="hidden" name="hotelid" value="{hotelID}">
+            <div class="date-in date">
+              <label class="divider" for="date-in">прибытие</label>
+              <input type="text" id="date-in">
+              <label id="date-format-helper" for="date-in"></label>
+              <input type="hidden" id="us-date-in" name="datein" value="04/24/2015">
+            </div>
+            <div class="date-out date">
+              <label class="divider" for="date-out">выезд</label>
+              <input type="text" id="date-out">
+              <label class="date-format-helper" for="date-out"></label>
+              <input type="hidden" id="us-date-out" name="dateout" value="04/30/2015">
+            </div>
+            <label class="divider guests">Guests</label>
+            <div class="select-section">
+              <div class="adults choose">
+                <input name="adults" id="adults" type="text" value="1">
+                <label for="adults">Adults</label>
+              </div>
+              <div class="children choose">
+                <input name="children" id="children" type="text" value="0">
+                <label for="children">Children</label>
+              </div>
+            </div>
+            <button type="submit" class="go booking-link tracking-link" value="" title="Find Rooms">Find Rooms</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

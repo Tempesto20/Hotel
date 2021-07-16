@@ -62,27 +62,62 @@ for (let anchor of anchors) {
 
 
 //----------(модальное окно)---------------------------
-var modal = document.getElementById('myModal');
+
+// var modal = document.getElementById('myModal');
 
 
-var btn = document.getElementById("myBtn");
+// var btn = document.getElementById("myBtn");
 
 
-var span = document.getElementsByClassName("close")[0];
+// var span = document.getElementsByClassName("close")[0];
 
 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+// btn.onclick = function() {
+//     modal.style.display = "block";
+// }
 
 
-span.onclick = function() {
-    modal.style.display = "none";
-}
+// span.onclick = function() {
+//     modal.style.display = "none";
+// }
 
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+
+//-----------------------------------------------------
+
+
+//------------(календарь)--------------------------
+setTimeout(function(){
+	var calIn = jQuery( "#date-in" ).datepicker({ disabled: false, firstDay: 0, altField: "#us-date-in", altFormat: 'mm/dd/yy', minDate:0, onSelect: checkCalendarDates, dateFormat: 'mm/dd/yy'});
+			calIn.datepicker('setDate', new Date());
+			
+			var calOut = jQuery( "#date-out" ).datepicker({ disabled: false, firstDay: 0, altField: "#us-date-out", altFormat: 'mm/dd/yy', minDate:1, onSelect: checkCalendarDates, dateFormat: 'mm/dd/yy'});
+			calOut.datepicker('setDate', new Date());
+	
+	function checkCalendarDates(date, datePickerO)
+			{
+				var dateIn = calIn.datepicker("getDate");
+				var dateOut = calOut.datepicker("getDate");
+				
+				if(dateIn >= dateOut && calIn.attr("id") === datePickerO.id)
+					calOut.datepicker('setDate', new Date( dateIn.getTime() + (24 * 60 * 60 * 1000) ));
+				
+				if(dateOut <= dateIn && calOut.attr("id") === datePickerO.id)
+					calIn.datepicker('setDate', new Date( dateOut.getTime() - (24 * 60 * 60 * 1000) ));
+			}
+	},9);    
+	
+	jQuery("#adults").spinner({
+			max : 10,
+			min : 1	});
+	jQuery("#children").spinner({
+		 max : 10,
+		 min : 0	});
+
+
+		 //-------------------------------------------
